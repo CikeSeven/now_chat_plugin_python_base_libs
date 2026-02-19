@@ -28,7 +28,8 @@
     {
       "name": "python_exec",
       "description": "执行 Python 代码并返回 stdout/stderr。",
-      "runtime": "builtin_python_exec",
+      "runtime": "python_script",
+      "scriptPath": "tools/python_exec.py",
       "enabledByDefault": true,
       "timeoutSec": 20,
       "outputLimit": 12000,

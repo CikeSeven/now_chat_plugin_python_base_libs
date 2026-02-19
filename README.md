@@ -12,6 +12,7 @@
 
 2. 工具：`python_exec`（唯一对模型暴露的工具）
 - 用于给大模型执行 Python 代码并返回 stdout/stderr。
+- 运行时使用 `python_script`（`tools/python_exec.py`），不依赖宿主内置工具。
 - 插件只注册这一个工具，避免暴露多余工具干扰模型决策。
 
 3. 插件配置页面
@@ -33,7 +34,7 @@ python_base_libs_plugin/
   runtime/
     .gitkeep
   tools/
-    （可选扩展脚本目录；当前仅使用内置 `builtin_python_exec`）
+    python_exec.py
   python_base_ui/
     __init__.py
     base.py
