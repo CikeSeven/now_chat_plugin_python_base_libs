@@ -27,7 +27,7 @@
   "tools": [
     {
       "name": "python_exec",
-      "description": "执行 Python 代码并返回 stdout/stderr。",
+      "description": "执行轻量 Python 代码并返回 stdout/stderr（不适合长时或重负载任务）。",
       "runtime": "python_script",
       "scriptPath": "tools/python_exec.py",
       "enabledByDefault": true,
@@ -38,7 +38,7 @@
         "properties": {
           "code": {
             "type": "string",
-            "description": "要执行的 Python 代码。"
+            "description": "要执行的轻量 Python 代码。"
           },
           "timeout_sec": {
             "type": "integer",

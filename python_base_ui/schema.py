@@ -103,7 +103,7 @@ class PythonBaseLibsConfigPage(UiPage):
             UiButton(
                 component_id="execute_code",
                 label="执行代码",
-                description="在当前 Python 环境执行上方代码。",
+                description="在当前 Python 环境执行轻量代码（不建议长时或高负载任务）。",
             ),
             UiTextInput(
                 component_id="exec_output",

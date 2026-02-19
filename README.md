@@ -11,7 +11,8 @@
 - 该插件默认开启 `providesGlobalPythonPaths=true`，安装并启用后可为其他插件提供共享库路径。
 
 2. 工具：`python_exec`（唯一对模型暴露的工具）
-- 用于给大模型执行 Python 代码并返回 stdout/stderr。
+- 用于给大模型执行轻量 Python 代码并返回 stdout/stderr。
+- 当前仅建议执行轻量、短时任务，不适合长时间运行或高负载计算。
 - 运行时使用 `python_script`（`tools/python_exec.py`），不依赖宿主内置工具。
 - 插件只注册这一个工具，避免暴露多余工具干扰模型决策。
 

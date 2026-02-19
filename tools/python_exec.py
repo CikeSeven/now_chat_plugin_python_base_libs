@@ -1,6 +1,7 @@
 """Python 代码执行工具（python_exec）。
 
-该工具作为插件脚本运行，不依赖宿主内置 runtime，便于后续完全插件化扩展。
+该工具作为插件脚本运行，不依赖宿主内置 runtime。
+当前设计目标是执行轻量、短时代码，不建议用于长时或重负载任务。
 """
 
 from __future__ import annotations
