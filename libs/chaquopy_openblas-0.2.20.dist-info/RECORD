@@ -1,0 +1,15 @@
+chaquopy/include/cblas.h,sha256=3xaUworQXIqAuH2ibEzhWxUSaApAP6EZyzqZrWMErGk,45648
+chaquopy/include/f77blas.h,sha256=17SR2k1HFktGvV3smbbwbGKwEoMc4Vuz7fzm5ELEtR0,47356
+chaquopy/include/lapacke.h,sha256=hr7mOW_tP5Y4B0TZc8BqwR1HinJfrfkNMtNt3i6qAbU,1245655
+chaquopy/include/lapacke_config.h,sha256=L_GXWSX5PGLfzlqa5qp21A28O1vrNWf7-NfzV7-3-i4,4236
+chaquopy/include/lapacke_mangling.h,sha256=fXH97lOh4M0BVoq6LxUvLh5Pu4SehNdA47Ax6Bn7-iI,474
+chaquopy/include/lapacke_utils.h,sha256=x4lD0xwEfMZv_i4xfkb5ruymNDcjxLcEXBvHtJtyBbk,33161
+chaquopy/include/openblas_config.h,sha256=paKIp_zRCFIs4CSEp-3HUfdI50AYLHiR0t8-jHnps74,4109
+chaquopy/lib/libopenblas.so,sha256=vkn-d8c1cHg1Ncuk4PQXA-RYfGWrS5VT45v1PSogd0w,8766736
+chaquopy/lib/cmake/openblas/OpenBLASConfig.cmake,sha256=BBT-hWdzHZRBvM1pAmFdh_f7UdVqU2Av1MCfwNYZZFY,194
+chaquopy/lib/cmake/openblas/OpenBLASConfigVersion.cmake,sha256=fkHNUQIG6aFS_MK7K8CVw5HMFCOIBaad4AzpNZJMXy0,285
+chaquopy/lib/pkgconfig/openblas.pc,sha256=_dknsCF79SG0b4SjobUhRlD8scSldGpCQM5D6yvx4bY,581
+chaquopy_openblas-0.2.20.dist-info/LICENSE,sha256=GQtanI2XI_6VitM5Fr1zRtlvqzxeqQgyuwLYVPYg_P8,1548
+chaquopy_openblas-0.2.20.dist-info/METADATA,sha256=_lNmuf6Vr8DTahjoyT6iw2Ku0-7Km5za7kuLlFALCp4,132
+chaquopy_openblas-0.2.20.dist-info/WHEEL,sha256=FoFMY9DYzpGIHqYOnBbps77C4xthCdClG-TJXAHz3nI,113
+chaquopy_openblas-0.2.20.dist-info/RECORD,,

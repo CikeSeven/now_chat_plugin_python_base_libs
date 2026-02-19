@@ -1,0 +1,5 @@
+chaquopy/lib/libc++_shared.so,sha256=71C0fHE893eMQu_TP95iZj8agKl2TIA1QbkOG8gGiUk,991920
+chaquopy_libcxx-11000.dist-info/LICENSE.TXT,sha256=U53Xrthuik8Sy90ObFDBicfXSEfk_sxkzixu46Ado4s,16703
+chaquopy_libcxx-11000.dist-info/METADATA,sha256=g-R_X_2DmMoy8tBvn38SC16-j2WAo51JHkQm9cgMxGs,85
+chaquopy_libcxx-11000.dist-info/WHEEL,sha256=KoYVHFXscvrE8Dm9mbz7d9-QmRQbn1WcHjFInmHskUE,113
+chaquopy_libcxx-11000.dist-info/RECORD,,

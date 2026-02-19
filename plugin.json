@@ -1,0 +1,63 @@
+{
+  "id": "python_base_libs",
+  "name": "Python 基础库插件",
+  "author": "NowChat",
+  "description": "为 NowChat 提供可选的 Python 基础库与 Python 代码执行工具。",
+  "version": "0.1.0",
+  "type": "python",
+  "pythonNamespace": "python_base_ui",
+  "providesGlobalPythonPaths": true,
+  "permissions": [
+    "tool:*",
+    "hook:*"
+  ],
+  "packages": [
+    {
+      "id": "python_base_bundle",
+      "name": "Python Base Bundle",
+      "description": "基础库插件主包（本地导入模式）。",
+      "version": "0.1.0",
+      "targetDir": ".",
+      "pythonPathEntries": [
+        ".",
+        "libs"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "python_exec",
+      "description": "执行 Python 代码并返回 stdout/stderr。",
+      "runtime": "builtin_python_exec",
+      "enabledByDefault": true,
+      "timeoutSec": 20,
+      "outputLimit": 12000,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "要执行的 Python 代码。"
+          },
+          "timeout_sec": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 90,
+            "description": "执行超时秒数。"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      }
+    }
+  ],
+  "hooks": [
+    {
+      "event": "app_start",
+      "runtime": "python_script",
+      "scriptPath": "hooks/app_start.py",
+      "priority": 5
+    }
+  ]
+}
