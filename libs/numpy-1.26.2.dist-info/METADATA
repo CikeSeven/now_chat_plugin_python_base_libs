@@ -67,8 +67,8 @@ Requires-Python: >=3.9
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
 License-File: LICENSES_bundled.txt
-Requires-Dist: chaquopy-openblas (>=0.2.20)
 Requires-Dist: chaquopy-libcxx (>=11000)
+Requires-Dist: chaquopy-openblas (>=0.2.20)
 
 <h1 align="center">
 <img src="https://raw.githubusercontent.com/numpy/numpy/main/branding/logo/primary/numpylogo.svg" width="300">
