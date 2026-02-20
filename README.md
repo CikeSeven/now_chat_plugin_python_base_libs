@@ -1,58 +1,31 @@
-# Python Base Libs Plugin
+# Python 基础库插件
 
-> 这是一个“Python 基础库插件”起始实现，用于给 NowChat 提供可选的 Python 科学计算能力。
+该插件用于为 NowChat 提供 Python 基础执行环境，并向模型开放 `python_exec` 工具。
 
-## 插件功能说明
-该插件当前提供以下能力：
+## 这个插件能做什么
+- 让模型执行 Python 代码并返回执行结果。
+- 提供常见基础库能力（按你安装包中的实际内容为准）。
+- 为其他 Python 插件提供共享运行路径（已启用全局路径共享）。
 
-1. 基础库环境占位
-- 约定将 Python 相关基础库文件放入 `libs/` 目录。
-- 插件安装后会把 `libs/` 加入 Python 运行路径（`pythonPathEntries`）。
-- 该插件默认开启 `providesGlobalPythonPaths=true`，安装并启用后可为其他插件提供共享库路径。
-
-2. 工具：`python_exec`（唯一对模型暴露的工具）
-- 用于给大模型执行轻量 Python 代码并返回 stdout/stderr。
-- 当前仅建议执行轻量、短时任务，不适合长时间运行或高负载计算。
-- 运行时使用 `python_script`（`tools/python_exec.py`），不依赖宿主内置工具。
-- 插件只注册这一个工具，避免暴露多余工具干扰模型决策。
-
-3. 插件配置页面
-- 提供“检查 Python 环境”按钮（检查 Python/NumPy/Pandas 是否可用）。
-- 提供 Python 代码输入框与“执行代码”按钮。
-- 页面下方直接显示执行输出，方便手动调试环境。
-
-## 目录结构
-```text
-python_base_libs_plugin/
-  plugin.json
-  README.md
-  assets/
-    .gitkeep
-  hooks/
-    app_start.py
-  libs/
-    .gitkeep
-  runtime/
-    .gitkeep
-  tools/
-    python_exec.py
-  python_base_ui/
-    __init__.py
-    base.py
-    schema.py
-```
-
-## plugin.json 关键字段
-- `type`: `python`
-- `pythonNamespace`: `python_base_ui`（插件配置页入口路径为 `python_base_ui/schema.py`）
-- `providesGlobalPythonPaths`: `true`（安装后为其他插件提供共享 Python 路径）
+## 核心工具
+- `python_exec`
+  - 用途：执行轻量 Python 代码。
+  - 返回：`stdout`、`stderr`、`exitCode`、耗时等信息。
+  - 建议：用于短时、轻量任务；不要用于长时间高负载计算。
 
 ## 使用方式
-1. 将 `python_base_libs_plugin` 目录压缩为 zip（zip 根目录必须直接包含 `plugin.json`）。
-2. 在应用中进入“插件中心”并导入该 zip。
-3. 安装后在插件配置页先点“检查 Python 环境”，再输入代码点击“执行代码”验证。
+1. 在插件中心安装本插件并保持“运行中”。
+2. 打开插件配置页，点击“检查 Python 环境”确认可用。
+3. 在配置页输入一段测试代码并执行，例如：
+   - `print("hello")`
+4. 在聊天中启用工具调用后，模型即可使用 `python_exec`。
 
-## 后续计划
-- 把基础库打包为可下载聚合包，并接入远程清单分发。
-- 在配置页增加代码模板快捷插入（如 NumPy / Pandas 示例）。
-- 增加更多常见原生依赖（如 `scipy` 所需底层依赖）的兼容方案。
+## 适用场景
+- 文本数据快速处理。
+- 简单数值计算与格式转换。
+- 作为其他 Python 插件的前置基础环境。
+
+## 注意事项
+- 本插件是很多 Python 插件的前置依赖，建议优先安装。
+- 若执行报错，请先在配置页做环境自检。
+- 代码执行结果受工具超时与输出长度限制影响。
