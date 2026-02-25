@@ -16,6 +16,6 @@ def main(payload):
     return {
         "ok": True,
         "hook": "app_start",
-        "plugin": "python_base_libs",
+        "plugin": "now_chat_plugin_python_base_libs",
         "event": payload.get("event"),
     }

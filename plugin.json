@@ -1,10 +1,14 @@
 {
-  "id": "python_base_libs",
+  "id": "now_chat_plugin_python_base_libs",
   "name": "Python 基础库插件",
   "author": "NowChat",
-  "description": "为 NowChat 提供可选的 Python 基础库与 Python 代码执行工具。",
+  "description": "为 NowChat 提供 Python 基础依赖与 Python 代码执行工具（requirements 动态安装）。",
   "version": "0.1.0",
   "type": "python",
+  "requirements": [
+    "numpy",
+    "pandas"
+  ],
   "pythonNamespace": "python_base_ui",
   "providesGlobalPythonPaths": true,
   "permissions": [
@@ -15,12 +19,11 @@
     {
       "id": "python_base_bundle",
       "name": "Python Base Bundle",
-      "description": "基础库插件主包（本地导入模式）。",
+      "description": "基础插件主包（仅脚本与 UI，不再内置第三方库）。",
       "version": "0.1.0",
       "targetDir": ".",
       "pythonPathEntries": [
-        ".",
-        "libs"
+        "."
       ]
     }
   ],
